@@ -1,0 +1,62 @@
+#spring:
+#  datasource:
+#    username: root
+#    password: 123456
+#    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&useUnicode=true&useSSL=true&serverTimezone=UTC
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    # 默认使用的hikari数据源,修改为druid数据源
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    # 指定目录schema所在的位置,文件名称默认时schema.sql/schema-all.sql
+#    schema:
+#    # 已经使用创建好了数据表就可以将该sql文件注释掉，否则再次启动时会重新建表
+##      - classpath:sql/department.sql
+##      - classpath:sql/employee.sql
+#    # SpringBoot2.x版本需要加上下面这句,运行项目主应用时才会自动建表
+#    initialization-mode: always
+#
+#    druid:
+#    # 数据源其他配置
+#      initialSize: 5
+#      minIdle: 5
+#      maxActive: 20
+#      maxWait: 60000
+#      timeBetweenEvictionRunsMillis: 60000
+#      minEvictableIdleTimeMillis: 300000
+#      validationQuery: SELECT 1 FROM DUAL
+#      testWhileIdle: true
+#      testOnBorrow: false
+#      testOnReturn: false
+#      # 打开PSCache，并且指定每个连接上PSCache的大小
+#      poolPreparedStatements: true
+#      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+#      maxPoolPreparedStatementPerConnectionSize: 20
+#      filters: stat,wall,log4j
+#      useGlobalDataSourceStat: true
+#      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#      # 做了如下配置不再需要创建配置类了
+#      # 配置监控服务器
+#      stat-view-servlet:
+#        login-username: admin
+#        login-password: 123456
+#        url-pattern: /druid/*
+#        reset-enable: false
+#      web-stat-filter:
+#        url-pattern: /*
+#        exclusions: "*.js,*.css,/druid/*"
+## Jpa
+##  jpa:
+##    hibernate:
+##      # ddl-auto是用来生成数据表的策略:更新或者创建数据表结构
+##      ddl-auto: update
+##    # 控制台显示SQL，方便观察
+##    show-sql: true
+#
+## 配置MyBatis
+##mybatis:
+##  # Mybatis全局配置文件的位置
+##  config-location: classpath:mybatis/mybatis-config.xml
+##  # SQL映射文件，mapper配置文件的位置
+##  mapper-locations: classpath:mybatis/mapper/*.xml
+#
+#
+#
