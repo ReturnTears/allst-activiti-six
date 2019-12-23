@@ -15,6 +15,8 @@ public class ActivitiTest {
     public void test1() {
         // 创建ProcessEngineConfiguration对象
         ProcessEngineConfiguration configuration = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("activiti.cfg.xml");
+        // 第二个参数对应xml文件中bean的id
+       // ProcessEngineConfiguration configuration = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("activiti.cfg.xml", "processEngineConfiguration");
         // 创建ProcessEngine对象
         ProcessEngine processEngine = configuration.buildProcessEngine();
         // 输出对象

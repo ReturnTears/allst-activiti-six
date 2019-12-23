@@ -27,9 +27,12 @@
         <property name="maxActive" value="3"/>
         <property name="maxIdle" value="1"/>
     </bean>
-    <!-- activiti单独运行的ProcessEngine配置, 这里使用单独模式 -->
+    <!-- activiti单独运行的ProcessEngine配置, 这里使用单独模式
+        bean的id:processEngineConfiguration是默认的
+    -->
     <bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
         <property name="dataSource" ref="dataSource"></property>
+        <!-- 是否生成表结构 -->
         <property name="databaseSchemaUpdate" value="true"/>
     </bean>
 </beans>
