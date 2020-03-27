@@ -23,7 +23,7 @@
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/activiti?useUnicode=true&amp;nullCatalogMeansCurrent=true&amp;characterEncoding=utf-8&amp;useSSL=true&amp;serverTimezone=UTC"/>
         <property name="username" value="root"/>
-        <property name="password" value="123456"/>
+        <property name="password" value="hyj123456"/>
         <property name="maxActive" value="3"/>
         <property name="maxIdle" value="1"/>
     </bean>
