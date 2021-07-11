@@ -32,10 +32,10 @@
     -->
     <bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
         <!-- 数据源 -->
-        <property name="dataSource" ref="dataSource"></property>
+        <property name="dataSource" ref="dataSource"/>
         <!-- 如果不希望使用上面的数据源bean，也可以直接将属性写到这里 -->
         <!--<property name="jdbcUsername" value="root"/>-->
-        <!-- 是否生成表结构 -->
-        <property name="databaseSchemaUpdate" value="true"/>
+        <!-- 是否生成表结构,第一次创建的时候设为true，创建后设为false -->
+        <property name="databaseSchemaUpdate" value="false"/>
     </bean>
 </beans>
